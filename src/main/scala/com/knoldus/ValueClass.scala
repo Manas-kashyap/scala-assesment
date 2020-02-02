@@ -13,7 +13,15 @@ class Age(val age: Int) extends AnyVal {
 }
 
 object displayDetails extends App {
+  val yourFirstName = scala.io.StdIn.readLine("Enter the first name")
+  val firstName = new FirstName(yourFirstName)
+  val yourLastName = scala.io.StdIn.readLine("Enter the first name")
+  val lastName = new LastName(yourLastName)
+  println("Enter your age :")
+  val currentAge = scala.io.StdIn.readInt()
+  val age = new Age(currentAge)
   def displayDetails(firstName: FirstName, lastName: LastName, age: Age): Unit = {
     println(firstName.getFirstName + " " + lastName.getLastName + " is of " + age.getAge + " years")
   }
+  displayDetails(firstName,lastName,age)
 }
