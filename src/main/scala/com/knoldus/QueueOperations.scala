@@ -1,3 +1,5 @@
+package com.knoldus
+
 trait QueueOperations{
   def performEnqueue(list: List[Int],input:Int):List[Int]
 
